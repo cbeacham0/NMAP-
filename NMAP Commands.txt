@@ -1,0 +1,80 @@
+always place in the name "nmap" before the command and the target IP you are scanning
+
+-p22,25 
+Scans only the specified ports 22 and 25.
+
+-F Scans top 100 ports.
+
+-sS 
+Performs an TCP SYN-Scan.
+
+-sA 
+Performs an TCP ACK-Scan.
+
+-sU 
+Performs an UDP Scan.
+
+-sV 
+Scans the discovered services for their versions.
+
+-sC 
+Perform a Script Scan with scripts that are categorized as
+"default".
+
+--script
+<script>
+Performs a Script Scan by using the specified scripts.
+
+-O 
+Performs an OS Detection Scan to determine the OS of the
+target.
+
+-A 
+Performs OS Detection, Service Detection, and traceroute scans
+Single -v (Verbose):
+Displays open ports, closed ports, and filtered ports.
+Provides a summary of the scan results.
+Double -vv (Very Verbose):
+Includes all the information from the single -v level.
+Adds more details, such as the reason for the state of each port (e.g., SYN-ACK, RST, etc.).
+Shows additional information about the scan process
+Triple -vvv (Extremely Verbose):
+Includes everything from the double -vv level.
+Provides even more detailed information, including timing statistics, packet trace, and debugging messages.
+Useful for troubleshooting or understanding the scan behavior in depth
+
+convert into XML NMAP Command:
+nmap -vv -A <IP Address> -oX target.xml
+
+
+convert xml or any other file type into html
+
+
+--top-ports=(numner of ports you want to scan)
+
+--stats-every=5s
+Shows the progress of the scan every 5 seconds.
+	
+-p-
+Scans all ports.
+
+-sV
+Performs service version detection on specified ports.
+
+-v
+Increases the verbosity of the scan, which displays more detailed information.
+
+
+
+-Pn	
+Disables ICMP Echo requests.
+-n
+Disables DNS resolution.
+
+--disable-arp-ping	
+Disables ARP ping.
+
+--packet-trace	
+Shows all packets sent and received
+
+
