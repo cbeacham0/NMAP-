@@ -1,0 +1,19 @@
+
+-sW -vv -p ((port#))
+windows scan to bypass the firewall
+The nmap -sW -vv -p command performs a TCP window scan. Let’s break it down:
+-sW: Initiates a TCP window scan. This technique examines the TCP window size of open ports to infer their state (open, closed, or filtered).
+-vv: Increases verbosity, providing more detailed output.
+-p: Specifies the ports to scan. You can specify a single port or a range of ports
+
+nmap --mtu 8 -vv (Input IP address)
+The nmap --mtu 8 -vv command allows you to specify your own Maximum Transmission Unit (MTU) for the scan. Here’s what it does:
+
+The MTU represents the maximum size of a packet that can be transmitted over a network. By using this option, Nmap creates fragmented packets with the specified size.
+Smaller packets are transmitted instead of sending one complete packet at a time. This technique helps evade filtering and detection mechanisms enabled on the target machine.
+In the example above, the argument --mtu 8 makes Nmap use small 8-byte packets for the scan
+
+The nmap -f -vv -p command performs a TCP fragment scan. Let’s break it down:
+-f: Initiates a TCP fragment scan. Nmap sends fragmented packets to the target, which can help evade firewalls and intrusion detection systems (IDS).
+-vv: Increases verbosity, providing more detailed output.
+-p: Specifies the ports to scan. You can specify a single port or a range of ports
