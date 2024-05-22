@@ -1,0 +1,3 @@
+The command nmap ip 127.0.0.0/24 -p 22 --open scans the IP range from 127.0.0.0 to 127.0.0.255 for open SSH ports (port 22).
+The /24 notation represents a CIDR (Classless Inter-Domain Routing) subnet mask, indicating that the first 24 bits of the IP address are fixed, leaving 8 bits for the subnet itself. 
+In this case, it covers all IPs from 127.0.0.0 to 127.0.0.255
