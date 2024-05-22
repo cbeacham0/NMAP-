@@ -1,0 +1,5 @@
+
+-sV: Initiates a version scan, which detects the SSH version.
+-p 22: Specifies that the scan targets port 22, the default port for SSH.
+[target host]: Replace this with the hostname or IP address you want to scan.
+this is good for SSH services
