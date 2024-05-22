@@ -1,0 +1,14 @@
+The -sC option in Nmap stands for “Script Scan”. When you include this option in your Nmap command, it enables the execution of default scripts against the target host. These scripts perform various tasks related to service detection, vulnerability scanning, and information gathering.
+
+Here’s what the -sC option does:
+
+Default Scripts:
+Nmap includes a set of predefined scripts (located in the scripts directory) that cover common tasks.
+These scripts are executed during the scan to provide additional information about the services running on the target.
+Examples of Script Categories:
+Vulnerability Detection: Scripts that check for known vulnerabilities (e.g., detecting outdated software versions).
+Service Enumeration: Scripts that gather information about services (e.g., identifying HTTP servers, SMTP servers, etc.).
+Default Credentials: Scripts that attempt to log in using default credentials (useful for identifying weak configurations).
+Usage:
+Include -sC in your Nmap command to enable script scanning:
+nmap -sC [target]
