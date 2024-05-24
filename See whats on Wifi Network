@@ -1,1 +1,4 @@
 sudo arp-scan --interface=eth0 --localnet
+
+Once you have the IP range info use nmap command 
+nmap 192.0.0.0/24 
