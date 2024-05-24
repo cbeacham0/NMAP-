@@ -1,0 +1,5 @@
+ifconfig | grep inet
+This will show you a list view without all the fluff your network IP address you are connected on
+
+ipcalc (input ip address) 192.0.0.0
+This will allow you to get the range of ip addresses
