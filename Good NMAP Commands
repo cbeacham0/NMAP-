@@ -1,0 +1,1 @@
+nmap -sC -sV -A -p- ip_address -T5 - (This scans all ports and fast)
