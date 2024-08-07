@@ -1,0 +1,60 @@
+root@ip-10-10-122-197:~# root@ip-10-10-122-197:~# nmap ip_address -sS -sV --vv 10.10.122.197
+root@ip-10-10-122-197:~#: command not found
+root@ip-10-10-122-197:~# nmap ip_address -sS -sV --vv 10.10.147.54
+
+Starting Nmap 7.60 ( https://nmap.org ) at 2024-08-07 20:35 BST
+NSE: Loaded 42 scripts for scanning.
+Failed to resolve "ip_address".
+Initiating ARP Ping Scan at 20:35
+Scanning 10.10.147.54 [1 port]
+Completed ARP Ping Scan at 20:35, 0.22s elapsed (1 total hosts)
+Initiating SYN Stealth Scan at 20:35
+Scanning creative.thm (10.10.147.54) [1000 ports]
+Discovered open port 80/tcp on 10.10.147.54
+Discovered open port 22/tcp on 10.10.147.54
+
+root@ip-10-10-122-197:~# clear
+
+
+
+
+
+
+
+root@ip-10-10-122-197:~# nmap -sS -sV --vv 10.10.147.54
+
+Starting Nmap 7.60 ( https://nmap.org ) at 2024-08-07 20:35 BST
+NSE: Loaded 42 scripts for scanning.
+Initiating ARP Ping Scan at 20:35
+Scanning 10.10.147.54 [1 port]
+Completed ARP Ping Scan at 20:35, 0.22s elapsed (1 total hosts)
+Initiating SYN Stealth Scan at 20:35
+Scanning creative.thm (10.10.147.54) [1000 ports]
+Discovered open port 80/tcp on 10.10.147.54
+Discovered open port 22/tcp on 10.10.147.54
+Completed SYN Stealth Scan at 20:35, 4.08s elapsed (1000 total ports)
+Initiating Service scan at 20:35
+Scanning 2 services on creative.thm (10.10.147.54)
+Completed Service scan at 20:35, 6.00s elapsed (2 services on 1 host)
+NSE: Script scanning 10.10.147.54.
+NSE: Starting runlevel 1 (of 2) scan.
+Initiating NSE at 20:35
+Completed NSE at 20:35, 0.01s elapsed
+NSE: Starting runlevel 2 (of 2) scan.
+Initiating NSE at 20:35
+Completed NSE at 20:35, 0.00s elapsed
+Nmap scan report for creative.thm (10.10.147.54)
+Host is up, received arp-response (0.00023s latency).
+Scanned at 2024-08-07 20:35:32 BST for 11s
+Not shown: 998 filtered ports
+Reason: 998 no-responses
+PORT   STATE SERVICE REASON         VERSION
+22/tcp open  ssh     syn-ack ttl 64 OpenSSH 8.2p1 Ubuntu 4ubuntu0.5 (Ubuntu Linux; protocol 2.0)
+80/tcp open  http    syn-ack ttl 64 nginx 1.18.0 (Ubuntu)
+MAC Address: 02:F9:DE:BB:39:E3 (Unknown)
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 10.92 seconds
+           Raw packets sent: 2002 (88.072KB) | Rcvd: 5 (204B)
