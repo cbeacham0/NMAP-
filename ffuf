@@ -1,0 +1,1 @@
+ffuf -u http://website.thm -w /usr/share/seclists/discovery/web-content/raft-medium.words.txt -H "Host: Fuzz"
