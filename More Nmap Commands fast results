@@ -1,0 +1,11 @@
+Use -sC -sV -A to get more info and possible password information 
+
+
+nmap -sC -sV -T4  good for info and post details
+
+
+nmap 10.10.4.39 -vv -sV -sS -O -p- -T 5 -oA Enumeration (Good for all ports)
+
+
+-vv make it verbose
+
