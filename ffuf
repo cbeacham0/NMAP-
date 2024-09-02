@@ -1,1 +1,2 @@
 ffuf -u http://website.thm -w /usr/share/seclists/discovery/web-content/raft-medium.words.txt -H "Host: Fuzz"
+ffuf -w /usr/share/wordlists/dirb/common.txt -u http://IP_Address:port/FUZZ
