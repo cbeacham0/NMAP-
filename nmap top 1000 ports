@@ -1,1 +1,1 @@
-nmap -sS -O -T4 -sV -sC Ip_address -p- --top--ports 1000 
+nmap -sS -O -T4 -sV -sC Ip_address -p- --top-ports 1000 
